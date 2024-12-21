@@ -1,0 +1,90 @@
+.post-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* 2 thằng này giúp ẩn phần thừa ở góc khi bo tròn */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post-table th,
+.post-table td {
+  border-right: 1px solid #ddd;
+  text-align: left;
+}
+
+.post-table th:last-child,
+.post-table td:last-child {
+  border-right: none;
+}
+
+.post-table thead th {
+  padding: 12px 15px;
+  text-align: center;
+  background-color: #84e6d7;
+  color: white;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+.post-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.post-table tbody td {
+  padding: 12px 15px;
+  color: #333;
+  font-size: 14px;
+}
+
+.post-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.post-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .post-table thead tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .post-table thead th {
+    font-size: 10px;
+  }
+
+  .postTitle {
+    width: 40%;
+  }
+
+  .postBody {
+    width: 60%;
+  }
+
+  .post-table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .post-table tbody td {
+    padding: 10px 12px 10px 10px;
+    font-size: 10px;
+  }
+
+  .post-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
